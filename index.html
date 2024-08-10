@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Peluquería Moderna - Registro y Login</title>
+</head>
+<body>
+  <div class="container">
+    <div class="tabs">
+      <div class="tab active" onclick="showTab('login')">Iniciar Sesión</div>
+      <div class="tab" onclick="showTab('register')">Registrarse</div>
+    </div>
+    <div id="login" class="form-container">
+      <h2>Iniciar Sesión</h2>
+      <form id="loginForm">
+        <div class="input-group">
+          <label for="loginEmail">Email</label>
+          <input type="email" id="loginEmail" required>
+        </div>
+        <div class="input-group">
+          <label for="loginPassword">Contraseña</label>
+          <input type="password" id="loginPassword" required>
+        </div>
+        <button type="submit">Iniciar Sesión</button>
+      </form>
+    </div>
+    <div id="register" class="form-container" style="display: none;">
+      <h2>Registrarse</h2>
+      <form id="registerForm">
+        <div class="input-group">
+          <label for="nombre">Nombre</label>
+          <input type="text" id="nombre" required>
+        </div>
+        <div class="input-group">
+          <label for="apellidos">Apellidos</label>
+          <input type="text" id="apellidos" required>
+        </div>
+        <div class="input-group">
+          <label for="genero">Género</label>
+          <select id="genero" required>
+            <option value="">Seleccionar</option>
+            <option value="masculino">Masculino</option>
+            <option value="femenino">Femenino</option>
+          </select>
+        </div>
+        <div class="input-group">
+          <label for="fechaNacimiento">Fecha de Nacimiento</label>
+          <input type="date" id="fechaNacimiento" required>
+        </div>
+        <div class="input-group">
+          <label for="ciudad">Ciudad</label>
+          <input type="text" id="ciudad" required>
+        </div>
+        <div class="input-group">
+          <label for="direccion">Dirección</label>
+          <input type="text" id="direccion" required>
+        </div>
+        <div class="input-group">
+          <label for="telefono">Teléfono</label>
+          <input type="tel" id="telefono" required>
+        </div>
+        <div class="input-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" required>
+        </div>
+        <div class="input-group">
+          <label for="Contraseña">Contraseña</label>
+          <input type="password" id="password" required>
+        </div>
+        <button type="submit">Registrarse</button>
+      </form>
+    </div>
+  </div>
+  
+  <script src="/script.js"></script>
+</body>
+</html>
