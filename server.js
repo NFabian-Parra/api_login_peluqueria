@@ -2,14 +2,20 @@ const express = require("express");
 const cors = require('cors');
 const {connectDB} = require('./config/db');
 const bodyParser = require('body-parser');
-
-
+require('dotenv').config(); // paquete para acceder al .env
+const path = require('path');
 const app = express();
 
 connectDB(); 
 
 app.use(cors());
 app.use(bodyParser.json());
+
+app.use(express.static(path.join(__dirname,'public')));
+
+app.get('/', (req, res)=>{
+    res.sendFile(path.join(__dirname,'public', 'index.html'))
+})
 
 app.use('/api/auth', require('./routes/auth'));
 
@@ -24,5 +30,4 @@ app.listen(PORT, async() =>{
     } catch(err){
         console.error('Error base de datos', err);
     }
-
 });
